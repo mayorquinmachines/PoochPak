@@ -2,7 +2,7 @@
 
 * Home security systems may be vulnerable where stationary webcam coverage is weak.
 * Access to real-time GPS data may help retrieve a lost pet.
-* K9 Rescue and Security operations may benefit from object recognition algorithms.
+* K9 Rescue and Security operations may benefit from object recognition algorithms or environmental sensors.
 
 The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
 
