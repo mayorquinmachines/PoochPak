@@ -14,7 +14,7 @@ Requirements:
 - Tensorflow for Raspbian
 - Numpy
 - Keras2
-- hologram-python-sdk
+- [hologram-python-sdk](https://github.com/hologram-io/hologram-python)
 - [YOLO on Raspian](https://github.com/PiSimo/PiCamNN)
 
 ## Rasbian Jessie
