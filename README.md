@@ -17,7 +17,7 @@ The PoochPak leverages the special abilities/perspective of dogs for a 'poochies
 ## Software
 Requirements:
 - [Raspian image 2017-06-23](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian/images/)
-- OpenCV for Python3
+- [OpenCV for Python3](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
 - Apache2 server
 - Tensorflow for Raspbian
 - Numpy
