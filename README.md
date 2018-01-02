@@ -15,8 +15,7 @@ Requirements:
 - Numpy
 - Keras2
 - hologram-python-sdk
-
-https://github.com/PiSimo/PiCamNN
+- [YOLO on Raspian](https://github.com/PiSimo/PiCamNN)
 
 ## Rasbian Jessie
 For this project, python3.4 is required as the main python3 version used for all installations. Unless you want to
