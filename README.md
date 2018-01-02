@@ -1,4 +1,4 @@
-# Pooch Pak Project
+# Project: PoochPak 
 
 * Home security systems may be vulnerable where stationary webcam coverage is weak.
 * Access to real-time GPS data may help retrieve a lost pet.
