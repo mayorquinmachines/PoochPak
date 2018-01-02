@@ -8,7 +8,6 @@ Requirements:
 - OpenCV for Python3
 - Apache2 server
 - Tensorflow for Raspbian
-- telegram-cli
 - Numpy
 - Keras2
 - hologram-python-sdk
@@ -24,8 +23,7 @@ http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-
 ``` sudo modprobe bcm2835-v4l2 ```
 
 ** Setting up Hologram **
-clone the repo: https://github.com/hologram-io/hologram-python
-Then:
+``` git clone https://github.com/hologram-io/hologram-python ```
 ``` cd hologram-python ```
 ``` sudo pip -r requirements.txt ```
 ``` sudo python setup.py install ```
