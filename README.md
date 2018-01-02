@@ -6,6 +6,8 @@
 
 Deploy your own furry minions! The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
 
+![](https://vignette.wikia.nocookie.net/fallout/images/d/d2/FNVRex.png/revision/latest?cb=20101102161339)
+
 ## Hardware
 * Raspberry Pi
 * Hologram Nova USB Modem
