@@ -6,7 +6,15 @@
 
 The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
 
+## Hardware
+* Raspberry Pi
+* Hologram Nova USB Modem
+* PNY PowerPack
+* Infrared Night Vision Camera
+* Pulse Sensor
+* Temperature Sensor
 
+## Software
 Requirements:
 - Raspian image 2017-06-21
 - OpenCV for Python3
