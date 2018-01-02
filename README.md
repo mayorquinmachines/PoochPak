@@ -1,6 +1,10 @@
 # Pooch Pak Project
 
-A smart dog vest for better communication and tracking of your dog, security, and home automation.
+* Home security systems may be vulnerable where webcam coverage is weak.
+* Access to real-time sensory information may help retrieve a lost pet.
+* K9 Rescue and Security operations may benefit from additional sensors.
+
+The PoochPak leverages the special abilities/perspective of dogs to offer a platform to collect audio/visual and biometric data.
 
 
 Requirements:
