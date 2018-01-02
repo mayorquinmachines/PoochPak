@@ -19,9 +19,9 @@ Requirements:
 - [Raspian image 2017-06-23](http://ftp.jaist.ac.jp/pub/raspberrypi/raspbian/images/)
 - [OpenCV for Python3](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
 - Apache2 server
-- Tensorflow for Raspbian
+- [Tensorflow for Raspbian](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 - Numpy
-- Keras2
+- [Keras2](https://nikhilraghava.wordpress.com/2017/08/05/installing-keras-on-raspberry-pi-3/)
 - [hologram-python-sdk](https://github.com/hologram-io/hologram-python)
 - [YOLO on Raspian](https://github.com/PiSimo/PiCamNN)
 
