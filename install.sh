@@ -71,7 +71,7 @@ echo
 
 echo 'Starting Hologram installation...'
 cd ~/
-wget https://github.com/hologram-io/hologram-python.git
+git clone https://github.com/hologram-io/hologram-python.git
 cd ~/hologram-python
 pip install -r requirements.txt
 echo 'Installing Hologram now...'
