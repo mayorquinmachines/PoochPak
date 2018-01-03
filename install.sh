@@ -2,6 +2,8 @@
 
 echo 'Updating...'
 sudo apt-get update -y
+cd ~/
+git clone https://github.com/pimoroni/adxl345-python
 echo
 
 echo 'Starting OpenCV installation...'
@@ -76,6 +78,12 @@ sudo python3 setup.py install
 echo 'DONE installing Hologram!'
 echo
 
+echo 'Installing Apache2'
+sudo apt-get install apache2
+echo
+
 echo 'Setting up PiCam for use'
 sudo modprobe bcm2835-v4l2
+echo
+
 echo 'DONE!'
