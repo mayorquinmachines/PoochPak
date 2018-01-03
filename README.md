@@ -6,7 +6,7 @@
 
 Deploy your own furry minions! The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
 
-![](http://smellslikeml.com/static/sweetpea_swat.jpg | width=50)
+![](http://smellslikeml.com/static/sweetpea_swat.jpg)
 
 ## Hardware
 * Raspberry Pi
