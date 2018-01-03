@@ -8,12 +8,12 @@ echo
 
 echo 'Starting OpenCV installation...'
 sudo apt-get install build-essential cmake pkg-config -y
-sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev -y
 sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev -y
 sudo apt-get install libxvidcore-dev libx264-dev -y
 sudo apt-get install libgtk2.0-dev -y
 sudo apt-get install libatlas-base-dev gfortran -y
-sudo apt-get install python2.7-dev python3-dev
+sudo apt-get install python2.7-dev python3-dev -y
 cd ~/
 wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.0.0.zip
 unzip opencv.zip
@@ -21,7 +21,7 @@ wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.0.
 unzip opencv_contrib.zip
 rm opencv.zip opencv_contrib.zip
 echo 'Installing numpy dependency, this might take a while...'
-pip install numpy
+sudo pip3 install numpy 
 echo 'Installing OpenCV now...'
 cd ~/opencv-3.0.0/
 mkdir build
@@ -64,22 +64,24 @@ sudo apt-get install python3-h5py -y
 sudo pip3 install --upgrade --no-deps git+git://github.com/Theano/Theano.git
 
 echo 'Installing Keras now...'
-sudo pip3 install keras -y
-sudo pip3 install --upgrade six -y
+sudo pip3 install keras 
+sudo pip3 install --upgrade six 
 echo 'DONE installing Keras!'
 echo
 
 echo 'Starting Hologram installation...'
 cd ~/
 wget https://github.com/hologram-io/hologram-python.git
+cd ~/hologram-python
 pip install -r requirements.txt
 echo 'Installing Hologram now...'
 sudo python3 setup.py install 
+cd ~/
 echo 'DONE installing Hologram!'
 echo
 
 echo 'Installing Apache2'
-sudo apt-get install apache2
+sudo apt-get install apache2 -y
 echo
 
 echo 'Setting up PiCam for use'
