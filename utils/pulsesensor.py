@@ -85,7 +85,6 @@ class Pulsesensor:
                 T = thresh
 
             if N > 2500:                                # if 2.5 seconds go by without a beat
-                print 'Hitting 2.5 w/out beat!'
                 thresh = 512                            # set thresh default
                 P = 512                                 # set P default
                 T = 512                                 # set T default

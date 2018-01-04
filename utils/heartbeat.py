@@ -5,10 +5,11 @@ def heart_rate():
     p = Pulsesensor()
     p.startAsyncBPM()
     try:
-        bpm = p.BPM
-        if bpm == 0:
-            bpm  = "No Heartbeat found"
-        return bpm
+	bpm = p.BPM
+	if bpm == 0:
+	    bpm  = "No Heartbeat found"
+	p.stopAsyncBPM()
+	return bpm
     except:
         p.stopAsyncBPM()
         return
@@ -16,6 +17,7 @@ def heart_rate():
 def test():
     hr_result = heart_rate()
     if hr_result:
+        print(hr_result)
         print('Pulse sensor test PASSED')
         return 'PASSED'
     else:

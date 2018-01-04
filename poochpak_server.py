@@ -12,6 +12,9 @@ sys.path.append('/home/pi/PoochPak/utils/')
 from body_temp import *
 from heartbeat import heart_rate
 from accelerometer import accel
+from pulsesensor import Pulsesensor
+p = Pulsesensor()
+p.startAsyncBPM()
 #################################
 
 ###Importing Hologram Wrapper Module
@@ -28,10 +31,13 @@ class myHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         tm_stmp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         hh = Hologrammer()
+        heart = p.BPM
+        if heart == 0:
+            heart  = "No Heartbeat found"
         payload = {'time': tm_stmp, 
                    'temp' : read_temp(), 
                    'accel': accel(), 
-                   'heart': heart_rate(),
+                   'heart': heart,
                    'geo': hh.get_geo()}
 
 	self.send_response(200)

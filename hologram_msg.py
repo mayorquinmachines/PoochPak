@@ -9,7 +9,10 @@ class Hologrammer(object):
         
     def get_geo(self):
         l = self.hologram.network.location
-        return {'lat': l.latitude, 'lon': l.longitude, 'time': l.time}
+        if l:
+            return {'lat': l.latitude, 'lon': l.longitude, 'time': l.time}
+        else:
+            return
 
     def msg_send(self, msg, geo_stamp=True):
         if geo_stamp:

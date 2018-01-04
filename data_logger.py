@@ -30,9 +30,13 @@ while True:
                 f = open('poochpak_log.txt', 'a')
                 acc = data['accel']
                 geo = data['geo']
+                if geo:
+                    lat, lon = geo.lat, geo.lon
+                else:
+                    lat, lon = 'NA', 'NA'
                 f.write('{},{},{},{},{},{},{},{}\n'.format(data.time, data.temp, data.heart, 
-                                                           acc.x, acc.y, acc.z, 
-                                                           geo.lat, geo.lon))
+                                                           acc.x, acc.y, acc.z,
+                                                           lat, lon))
                 f.close()
                 body = 'Notification Log \n Time: {}\n'.format(data['time'])
                 if data['heart'] > 150:
