@@ -8,9 +8,10 @@ import BaseHTTPServer
 from BaseHTTPServer import BaseHTTPRequestHandler
 
 ###Importing Sensor Dependencies
-from utils.body_temp import *
-from utils.heartbeat import heart_rate
-from utils.accelerometer import accel
+sys.path.append('/home/pi/PoochPak/utils/')
+from body_temp import *
+from heartbeat import heart_rate
+from accelerometer import accel
 #################################
 
 ###Importing Hologram Wrapper Module
