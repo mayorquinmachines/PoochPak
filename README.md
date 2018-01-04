@@ -40,3 +40,6 @@ cd hologram-python
 sudo pip -r requirements.txt 
 sudo python setup.py install```
 
+
+### Wiring the Sensors
+![Wiring](http://mayorquinmachines.ai/images/poochpak_bb.png)
