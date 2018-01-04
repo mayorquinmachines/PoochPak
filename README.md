@@ -18,25 +18,25 @@ Deploy your own furry minions! The PoochPak leverages the special abilities/pers
 
 ## Software
 Requirements:
-- [Raspian image 2017-06-21](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip)
-- [OpenCV for Python3](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
+- [Raspbian image 2017-06-21 for Pi 3](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip)
+- [OpenCV for Pi Zero](https://www.pyimagesearch.com/2015/12/14/installing-opencv-on-your-raspberry-pi-zero/) or [OpenCV for Pi 3](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
 - Apache2 server
-- [Tensorflow for Raspbian](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
+- [Tensorflow for Pi Zero](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/) or [Tensorflow for Pi 3](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 - Numpy
 - [Keras2](https://nikhilraghava.wordpress.com/2017/08/05/installing-keras-on-raspberry-pi-3/)
 - [hologram-python-sdk](https://github.com/hologram-io/hologram-python)
 - [YOLO on Raspian](https://github.com/PiSimo/PiCamNN)
 
-### A Note on Rasbian:
+### A Note on Raspbian:
 Compatibility between project dependencies requires python3.4 as default python3. I DO NOT recommend changing default python3 version, you should burn this specific image for your raspberry pi:
 http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip
 
-** Enable Pi camera command **
-``` sudo modprobe bcm2835-v4l2 ```
+#### Enable Pi camera command
+```sudo modprobe bcm2835-v4l2```
 
-** Setting up Hologram **
+#### Setting up Hologram
 ``` git clone https://github.com/hologram-io/hologram-python 
 cd hologram-python 
 sudo pip -r requirements.txt 
-sudo python setup.py install ```
+sudo python setup.py install```
 

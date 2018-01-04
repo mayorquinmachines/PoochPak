@@ -5,6 +5,7 @@ import ast
 import time
 import numpy as np
 from datetime import datetime
+from hologram_msg import Hologrammer
 
 INTERVAL_SEC = 30
 
@@ -21,21 +22,27 @@ while True:
         r = requests.get('http://localhost:8925')
         if r.status_code == 200:
             data = ast.literal_eval(r.text)
-            f = open('poochpak_log.txt', 'a')
-            x = data['accl']['x']
-            y = data['accl']['y']
-            z = data['accl']['z']
-            f.write('{},{},{},{},{},{}\n'.format(data['time'], data['temp'], data['heart'], x, y, z))
-            f.close()
-            body = 'Notification Log \n Time: {}\n'.format(data['time'])
-            if data['heart'] > 150:
-                body += 'Heart Rate Elevated: {} \n'.format(data['heart'])
-            if np.abs(data['temp'] - 102) > 5:
-                body += 'Temperature Warning: {} F\n'.format(data['temp'])
-            if data['accl'] != {'x': 0, 'y': 0, 'z': 0}:
-                body += 'Motion Detected: {}\n'.format(data['accl'])
-            if ('Warning' in body) or ('Motion' in body) or ('Elevated' in body):
-                print(body)
+            if not os.path.exists('./poochpak_log.txt'):
+                f = open('poochpak_log.txt', 'w')
+                f.write('time,temp,heart,acc_x,acc_y,acc_z,geo_lat,geo_lon\n'
+                f.close()
+            else:
+                f = open('poochpak_log.txt', 'a')
+                acc = data['accel']
+                geo = data['geo']
+                f.write('{},{},{},{},{},{},{},{}\n'.format(data.time, data.temp, data.heart, 
+                                                           acc.x, acc.y, acc.z, 
+                                                           geo.lat, geo.lon))
+                f.close()
+                body = 'Notification Log \n Time: {}\n'.format(data['time'])
+                if data['heart'] > 150:
+                    body += 'Heart Rate Elevated: {} \n'.format(data['heart'])
+                if np.abs(data['temp'] - 102) > 5:
+                    body += 'Temperature Warning: {} F\n'.format(data['temp'])
+                if data['accel'] != {'x': 0, 'y': 0, 'z': 0}:
+                    body += 'Motion Detected: {}\n'.format(data['accel'])
+                if ('Warning' in body) or ('Motion' in body) or ('Elevated' in body):
+                    print(body)
         else:
             pass
         time.sleep(INTERVAL_SEC)

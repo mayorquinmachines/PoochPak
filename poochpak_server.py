@@ -8,37 +8,30 @@ import BaseHTTPServer
 from BaseHTTPServer import BaseHTTPRequestHandler
 
 ###Importing Sensor Dependencies
-from pulsesensor import Pulsesensor
-from adxl345 import ADXL345
-from body_temp import *
+from utils.body_temp import *
+from utils.heartbeat import heart_rate
+from utils.accelerometer import accel
 #################################
 
-#Initializing sensor readings
-p = Pulsesensor()
-p.startAsyncBPM()
-adxl345 = ADXL345()
-
-
+###Importing Hologram Wrapper Module
+from hologram_msg import Hologrammer
+#################################
 
 if sys.argv[1:]:
     port = int(sys.argv[1])
 else:
-    port = 8925
-
-#TODO: Compute MOVING_HR_AVG
-MOVING_HR_AVG = 100
-
+    port = 8925 # Poochpak default
 
 class myHandler(BaseHTTPRequestHandler):
     protocol_version = "HTTP/1.0"
     def do_GET(self):
-        #result = instance.read()
-        #if result.is_valid():
         tm_stmp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        temp = read_temp()[1]
-        heart = p.BPM
-        accl = adxl345.getAxes(True)
-        payload = {'time': tm_stmp, 'temp' : temp, 'accl': accl, 'heart': heart}
+        hh = Hologrammer()
+        payload = {'time': tm_stmp, 
+                   'temp' : read_temp(), 
+                   'accel': accel(), 
+                   'heart': heart_rate(),
+                   'geo': hh.get_geo()}
 
 	self.send_response(200)
 	self.send_header('Content-type','text/html')
