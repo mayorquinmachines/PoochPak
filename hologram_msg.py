@@ -12,7 +12,7 @@ class Hologrammer(object):
         if l:
             return {'lat': l.latitude, 'lon': l.longitude, 'time': l.time}
         else:
-            return
+            return {'lat': 'NA', 'lon': 'NA', 'time': 'NA'}
 
     def msg_send(self, msg, geo_stamp=True):
         if geo_stamp:
