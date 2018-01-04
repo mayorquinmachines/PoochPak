@@ -38,7 +38,8 @@ http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-
 ``` git clone https://github.com/hologram-io/hologram-python 
 cd hologram-python 
 sudo pip -r requirements.txt 
-sudo python setup.py install```
+sudo python setup.py install
+```
 
 
 ### Wiring the Sensors
