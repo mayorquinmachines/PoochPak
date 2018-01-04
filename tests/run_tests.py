@@ -13,8 +13,8 @@ if __name__ == '__main__':
     if not temp:
         print('NOT PASSED')
         print('Is the line "dtoverlay=w1-gpio" at the end of your /boot/config.txt file?')
-        print('Did you run sudo modprobe w1-gpio ?')
-        print('Did you run sudo modprobe w1-therm')
+        print('Did you run "sudo modprobe w1-gpio" ?')
+        print('Did you run "sudo modprobe w1-therm" ?')
         print('If the first item is true, run "sudo reboot" ,then run: "sudo modprobe w1-gpio && sudo modprobe w1-therm"')
     elif not pulse:
         print('NOT PASSED')
