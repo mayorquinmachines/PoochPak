@@ -3,7 +3,6 @@
 echo 'Updating...'
 sudo apt-get update -y
 cd ~/
-sudo pip install adafruit-adxl345
 echo
 
 echo 'Starting OpenCV installation...'
@@ -77,6 +76,7 @@ pip install -r requirements.txt
 echo 'Installing Hologram now...'
 sudo python3 setup.py install 
 cd ~/
+curl -L hologram.io/python-install | bash
 echo 'DONE installing Hologram!'
 echo
 
@@ -88,10 +88,24 @@ echo 'Setting up PiCam for use'
 sudo modprobe bcm2835-v4l2
 echo
 
+echo 'Setting up temperature sensor'
+sudo echo "dtoverlay=w1-gpio" >> /boot/config.txt
+sudo modprobe w1-gpio
+sudo modprobe w1-therm
+echo
+
+echo 'Setting up accelerometer sensor'
+sudo pip install adafruit-adxl345
+echo
+
+echo 'Setting up pulse sensor'
+sudo modprobe spi-bcm2708
+
 echo 'Collecting Resources for YOLO'
 sudo cd /home/pi/PoochPak/yolo_picam/
 sudo cp index.html /var/www/html/
 wget https://www.dropbox.com/s/xastcd4c0dv2kty/tiny.h5?dl=0 -O tiny.h5
+cd ~/
 echo
 
 echo 'DONE!'
