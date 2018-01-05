@@ -120,5 +120,5 @@ sudo modprobe w1-therm  #For temp sensor
 
 sudo modprobe spi-bcm2708 #For pulse sensor
 ```
-There are also a script you can run to test all of the sensors. Try running ``` python ~/PoochPak/tests/run_tests.py
+There are also a script you can run to test all of the sensors. Try running ``` python ~/PoochPak/tests/run_tests.py```
 
