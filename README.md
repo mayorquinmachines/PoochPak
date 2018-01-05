@@ -9,12 +9,16 @@ Deploy your own furry minions! The PoochPak leverages the special abilities/pers
 ![PoochPak](poochpak_walking.gif?raw=true "Pooch")
 
 ## Hardware
-* Raspberry Pi
-* Hologram Nova USB Modem
-* PNY PowerPack
-* Infrared Night Vision Camera
-* Pulse Sensor
-* Temperature Sensor
+* [Raspberry Pi Zero](https://www.amazon.com/Raspberry-Starter-Power-Supply-Premium/dp/B0748MBFTS/ref=sr_1_5?s=electronics&ie=UTF8&qid=1515127853&sr=1-5&keywords=raspberry+pi+zero)
+* [Hologram Nova USB Modem](https://hologram.io/nova/)
+* [PNY PowerPack](https://www.amazon.com/gp/product/B00L9BU8Y2/ref=oh_aui_detailpage_o09_s00?ie=UTF8&psc=1)
+* [Infrared Night Vision Camera](https://www.amazon.com/gp/product/B0759GYR51/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)
+* [Pulse Sensor](https://www.adafruit.com/product/1093)
+* [MCP3008 Analog-Digital converter](https://www.adafruit.com/product/856)
+* [Temperature Sensor](https://www.adafruit.com/product/374)
+* [Accelerometer](https://www.adafruit.com/product/1231)
+* Dog vest of choice
+
 
 ## Software
 Requirements:
@@ -26,10 +30,26 @@ Requirements:
 - [Keras2](https://nikhilraghava.wordpress.com/2017/08/05/installing-keras-on-raspberry-pi-3/)
 - [hologram-python-sdk](https://github.com/hologram-io/hologram-python)
 - [YOLO on Raspian](https://github.com/PiSimo/PiCamNN)
+- [Adafruit Python ADXL345](https://github.com/adafruit/Adafruit_Python_ADXL345)
 
-### A Note on Raspbian:
-Compatibility between project dependencies requires python3.4 as default python3. I DO NOT recommend changing default python3 version, you should burn this specific image for your raspberry pi:
-http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip
+## Wiring the Sensors
+Here is a diagram showcasing how the temperature, pulse, and accelerometer sensors should be wired. We wired all these
+sensors to a small pcb board for more reliable connections while the vest is worn. You should connect the Hologram Nova
+via a usb port (for the zero we used a microusb to usb converter). You should also connect the pi camera using the mini
+camera ribbon. 
+![Wiring](http://mayorquinmachines.ai/images/poochpak_bb.png)
+
+## Install
+Compatibility between project dependencies requires python3.4 as default python3. You should burn
+[this](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip) specific
+image for your raspberry pi zero. 
+After making this image and wiring the pi, boot up and go through the first-time boot configuration.
+You should make sure to: 
+* Under *Advanced Options*, Expand filesystem
+* Under *Localization Options* change timezone 
+* Change User password
+* Under *Interfacing Options*, enable ssh, camera, SPI, IC2, and Serial
+
 
 #### Enable Pi camera command
 ```sudo modprobe bcm2835-v4l2```
@@ -52,5 +72,3 @@ nohup sudo python3 picam.py &
 nohup sudo python poochpak_server.py &
 ```
 
-### Wiring the Sensors
-![Wiring](http://mayorquinmachines.ai/images/poochpak_bb.png)

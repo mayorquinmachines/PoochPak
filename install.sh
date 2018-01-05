@@ -3,7 +3,7 @@
 echo 'Updating...'
 sudo apt-get update -y
 cd ~/
-git clone https://github.com/pimoroni/adxl345-python
+sudo pip install adafruit-adxl345
 echo
 
 echo 'Starting OpenCV installation...'
