@@ -22,7 +22,7 @@ Deploy your own furry minions! The PoochPak leverages the special abilities/pers
 
 ## Software
 Requirements:
-- [Raspbian image 2017-06-21 for Pi 3](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip)
+- [Raspbian Jessie image 2017-06-21](http://downloads.raspberrypi.org/raspbian/images/raspbian-2017-06-23/2017-06-21-raspbian-jessie.zip)
 - [OpenCV for Pi Zero](https://www.pyimagesearch.com/2015/12/14/installing-opencv-on-your-raspberry-pi-zero/) or [OpenCV for Pi 3](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
 - Apache2 server
 - [Tensorflow for Pi Zero](https://petewarden.com/2017/08/20/cross-compiling-tensorflow-for-the-raspberry-pi/) or [Tensorflow for Pi 3](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
