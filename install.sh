@@ -88,4 +88,10 @@ echo 'Setting up PiCam for use'
 sudo modprobe bcm2835-v4l2
 echo
 
+echo 'Collecting Resources for YOLO'
+sudo cd /home/pi/PoochPak/yolo_picam/
+sudo cp index.html /var/www/html/
+wget https://www.dropbox.com/s/xastcd4c0dv2kty/tiny.h5?dl=0 -O tiny.h5
+echo
+
 echo 'DONE!'

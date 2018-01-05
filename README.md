@@ -41,6 +41,16 @@ sudo pip -r requirements.txt
 sudo python setup.py install
 ```
 
+#### Starting YOLO object recognition
+``` 
+cd yolo_picam/
+nohup sudo python3 picam.py &
+```
+
+#### Starting Server
+``` 
+nohup sudo python poochpak_server.py &
+```
 
 ### Wiring the Sensors
 ![Wiring](http://mayorquinmachines.ai/images/poochpak_bb.png)
