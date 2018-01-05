@@ -51,15 +51,18 @@ You should make sure to:
 * Under *Interfacing Options*, enable ssh, camera, SPI, IC2, and Serial
 
 After a reboot, git clone this repo
-```cd ~/
+```
+cd ~/
 git clone https://github.com/mayorquinmachines/PoochPak.git
 cd PoochPak
 ```
 Run the install script to install all dependencies. Note: This will take a **long** time! Leave it running overnight.
-```./install.sh
+```
+./install.sh
 ```
 Reboot your pi after the install script has finished. Run:
-```sudo modprobe bcm2835-v4l2
+```
+sudo modprobe bcm2835-v4l2
 sudo modprobe w1-gpio
 sudo modprobe w1-therm
 ```
@@ -71,7 +74,8 @@ To use hologram to send SMS, you'll need to set up you Hologram Dashboard and ac
 [Here](https://www.hackster.io/hologram/hologram-python-sdk-sending-data-45f305) is the Hologram starter guide for doing
 just that. The install script has handled installing hologram-cli and hologram-python-sdk for you. You can test this
 by running
-```sudo hologram version
+```
+sudo hologram version
 ```
 Once your sim card is activated and your device shows that it is live in your Dashboard, you want to set up a phone
 number you want to send SMS messages to. In your Dashboard, click on your device and navigate to *Configuration*. From
@@ -79,7 +83,8 @@ that page, you'll want to configure your phone number under **Configure phone nu
 send SMS messages to this phone number. In this same page, you'll see **+ Show Device Key**. Clicking on this button
 will give you a key you'll need to authenticate your hologram-python-sdk. You'll want to create a config file where 
 you'll place this key for use. Run the following:
-```cd ~/PoochPak
+```
+cd ~/PoochPak
 touch config.py
 echo "DEVICEKEY='<your-key-here>'" >> config.py
 ```
@@ -109,7 +114,8 @@ on a network yet.
 
 If the sensors aren't working correctly, take a look at the wiring again and make sure everything is correct. Then try
 reenabling their modules again:
-```sudo modprobe w1-gpio  #For temp sensor
+```
+sudo modprobe w1-gpio  #For temp sensor
 sudo modprobe w1-therm  #For temp sensor
 
 sudo modprobe spi-bcm2708 #For pulse sensor
