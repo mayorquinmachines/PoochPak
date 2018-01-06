@@ -5,6 +5,7 @@
 * K9 Rescue and Security operations may benefit from object recognition algorithms or environmental sensors.
 
 Deploy your own furry minions! The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
+*Thanks to PiSimo's* [repo](https://github.com/PiSimo/PiCamNN) *for the YOLO code to run on raspbian.*
 
 ![PoochPak](poochpak_walking.gif?raw=true "Pooch")
 
