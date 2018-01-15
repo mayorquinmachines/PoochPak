@@ -9,6 +9,8 @@ Deploy your own furry minions! The PoochPak leverages the special abilities/pers
 
 *This* [repo](https://github.com/smellslikeml/cell_pwn_drone) *is a spinoff of the same project using a drone! Check it
 out!*
+[Here](https://www.hackster.io/man-sbestfriend-sbesthack/poochpak-mobile-information-gathering-and-security-system-a79c58)*is a link to the contest entry on hackster.io for more info.*
+
 
 ![PoochPak](poochpak_walking.gif?raw=true "Pooch")
 
