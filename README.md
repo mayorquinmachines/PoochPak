@@ -7,6 +7,9 @@
 Deploy your own furry minions! The PoochPak leverages the special abilities/perspective of dogs for a 'poochies-in-the-loop' system to collect and execute logic based on audio/visual and biometric cues.
 *Thanks to PiSimo's* [repo](https://github.com/PiSimo/PiCamNN) *for the YOLO code to run on raspbian.*
 
+*This* [repo](https://github.com/smellslikeml/cell_pwn_drone) *is a spinoff of the same project using a drone! Check it
+out!*
+
 ![PoochPak](poochpak_walking.gif?raw=true "Pooch")
 
 ## Hardware
